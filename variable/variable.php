@@ -8,13 +8,9 @@
 <body>
     <h1>Variable</h1>
     <?php
-        $name = "John Doe";
-        $age = 30;
-        $is_student = false;
-
-        echo "<p>Name: $name</p>";
-        echo "<p>Age: $age</p>";
-        echo "<p>Is Student: " . ($is_student ? "Yes" : "No") . "</p>";
+       $name="Nazmul Hossain";
+       $age=24;
+         echo "My Name Is ".$name." And My Age Is ".$age." Years old.";
     ?>
 </body>
 </html>
