@@ -39,7 +39,7 @@
 
 
         // $firstnumber=20;
-        // $secondnumber=20;
+        // $secondnumber=20; 
 
         // echo $firstnumber!=$secondnumber;
   
