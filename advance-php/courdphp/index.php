@@ -9,9 +9,13 @@
          <div class="mb-3">
             <input type="email" name="email" class="form-control" placeholder="Enter Your email">
         </div>
+        <div class="mb-3">
+            <input type="file" name="file" class="form-control" placeholder="Enter Your file">
+        </div>
          <div class="mb-3">
             <input type="password" name="password" class="form-control" placeholder="Enter Your password">
         </div>
+      
         <div class="mb-3">
             <input type="submit" name="submit" value="submit" class="btn btn-primary w-100">
         </div>

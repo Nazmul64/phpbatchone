@@ -1,4 +1,5 @@
 <?php require 'include/header.php'; ?>
+<a href="index.php" class="btn btn-success">Index Pages</a>
    <?php
     $database_connections=mysqli_connect('localhost','root','','users');
     if(!$database_connections){
@@ -17,6 +18,7 @@
   <thead>
     <tr>
       <th scope="col">SL</th>
+      <th scope="col">Profie Image</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Password</th>
@@ -31,20 +33,20 @@
               $name=$rows['user_name'];
               $email=$rows['email'];
               $password=$rows['password'];
+              $profile=$rows['file'];
               $serial++;
 ?>
     <tr>
       <th scope="row"><?php echo $serial?></th>
+      <td><img src="uploads/<?php echo  !empty($profile) ? $profile : 'profile.php'?>"width="100"></td>
       <td><?php echo htmlspecialchars($name)?></td>
       <td><?php echo htmlspecialchars($email)?></td>
       <td><?php echo htmlspecialchars($password)?></td>
       <td>
         <a href="single_edit.php?edit_id=<?php echo $rows['id'] ?>" class="btn btn-success">Edit</a>
         ||
-        <a href="delete.php?id=<?php echo $rows['id']; ?>" class="btn btn-danger"
-       onclick="return confirm('Are you sure you want to delete this record?');">
-       Delete
-    </a>
+       <a href="delete.php?id=<?php echo $rows['id']; ?> & profile=<?php echo $profile;?>" class="btn btn-danger">Delete</a>
+
       </td>
 </td>
     </tr>
