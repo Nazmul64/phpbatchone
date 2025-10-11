@@ -2,6 +2,8 @@
     $user_name=$_REQUEST['user_name'];
     $email=$_REQUEST['email'];
     $password=$_REQUEST['password'];
+    $country=$_REQUEST['country'];
+    $gender=$_REQUEST['gender'];
     $file =$_FILES['file'];
     $file_name=$file['name'];
     $tmp_name=$file['tmp_name'];
@@ -24,7 +26,7 @@
     }
     if($user_name && $email && $password){
 
-   $query="INSERT INTO user_info(file,user_name,email,password)VALUES('$file_name','$user_name','$email','$password')";
+   $query="INSERT INTO user_info(file,user_name,email,password,gender,country)VALUES('$file_name','$user_name','$email','$password','$country','$gender')";
 
 
    $result=mysqli_query($database_connections,$query);
